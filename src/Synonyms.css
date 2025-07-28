@@ -1,0 +1,28 @@
+.Synonyms {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0f8ff;
+  border: 1px solid #ead0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.Synonyms h4 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.Synonyms ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.Synonyms li {
+  background-color: #ecf0f1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
