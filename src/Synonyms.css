@@ -12,17 +12,20 @@
   color: #2c3e50;
 }
 
-.Synonyms ul {
+.SynonymList {
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
+  margin-top: 6px;
 }
 
-.Synonyms li {
-  background-color: #ecf0f1;
-  padding: 6px 12px;
-  border-radius: 6px;
+.SynonymList li {
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 5px 10px;
+  border-radius: 20px;
   font-size: 14px;
+  font-weight: 500;
 }

@@ -1,4 +1,4 @@
-.Results .TopBox {
+.TopBox {
   padding: 20px;
   background-color: #f4f9ff;
   border: 2px solid #e4e8ec;
@@ -7,22 +7,20 @@
   text-align: center;
 }
 
-.Results .TopBox h2 {
+.TopBox h2 {
   font-size: 32px;
   color: #2c3e50;
   margin: 0;
   text-transform: capitalize;
 }
 
-.Results .phonetic {
-  display: block;
+.phonetic {
   font-size: 20px;
   color: #3498db;
-  margin: 10px 0;
 }
 
-.Results audio {
-  margin-top: 10px;
+.audio-player {
+  height: 30px;
 }
 
 .phonetic-audio {
@@ -33,11 +31,63 @@
   margin-top: 10px;
 }
 
-.phonetic {
-  font-size: 20px;
-  color: #3498db;
+
+.PhotoGallery {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
 }
 
-.audio-player {
-  height: 30px;
+.PhotoItem {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.PhotoItem:hover {
+  transform: scale(1.03);
+}
+
+.PhotoSection {
+  margin-top: 40px;
+}
+
+.PhotoGalleryTitle {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.PhotoGallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+  gap: 12px;
+}
+
+.PhotoWrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Keeps consistent height */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PhotoItem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.PhotoItem:hover {
+  transform: scale(1.05);
 }
