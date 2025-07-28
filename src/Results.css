@@ -1,0 +1,43 @@
+.Results .TopBox {
+  padding: 20px;
+  background-color: #f4f9ff;
+  border: 2px solid #e4e8ec;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.Results .TopBox h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.Results .phonetic {
+  display: block;
+  font-size: 20px;
+  color: #3498db;
+  margin: 10px 0;
+}
+
+.Results audio {
+  margin-top: 10px;
+}
+
+.phonetic-audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.phonetic {
+  font-size: 20px;
+  color: #3498db;
+}
+
+.audio-player {
+  height: 30px;
+}

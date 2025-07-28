@@ -6,6 +6,7 @@ import "./Dictionary.css";
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState({});
+  const [audioUrl, setAudioUrl] = useState(null);
 
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
@@ -13,6 +14,11 @@ export default function Dictionary() {
 
   function handleSheCodesResponse(response) {
     setResults(response.data);
+  }
+
+  function handleFreeDictionaryResponse(response) {
+    const audio = response.data[0]?.phonetics?.find(p => p.audio);
+    setAudioUrl(audio?.audio || null);
   }
 
   function search(event) {
@@ -23,6 +29,17 @@ export default function Dictionary() {
   const sheCodesApiKey = "4e2df5aotaa983694533f2b4440ef095";
   const sheCodesApiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${sheCodesApiKey}`;
   axios.get(sheCodesApiUrl).then(handleSheCodesResponse);
+
+  // Free Dictionary API for audio
+  const freeDictionaryUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+  axios
+    .get(freeDictionaryUrl)
+    .then(handleFreeDictionaryResponse)
+    .catch((error) => {
+      console.error("Free Dictionary API error:", error.message);
+      setAudioUrl(null); // fallback in case audio not found
+    });
+
 }
 
   return (
@@ -41,7 +58,7 @@ export default function Dictionary() {
         </form>
       </section>
 
-      <Results results={results} />
+      <Results results={results} audioUrl={audioUrl} keyword={keyword} />
     </div>
   );
 }
