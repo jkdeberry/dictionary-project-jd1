@@ -27,7 +27,7 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <h1>DeBerry's Dictionary</h1>
+      <h1>DeBerry's Dictionary App</h1>
       <section>
         <form onSubmit={search} className="search-form">
           <input

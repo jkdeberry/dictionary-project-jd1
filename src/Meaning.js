@@ -7,7 +7,7 @@ export default function Meaning({ meaning }) {
     <div className="Meaning">
       <h3>{meaning.partOfSpeech}</h3>
       <p>
-        <strong>Definition:</strong>{meaning.definition}
+        <strong>Definition: </strong>{meaning.definition}
       </p>
     </div>
   );
