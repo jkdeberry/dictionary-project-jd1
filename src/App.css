@@ -3,6 +3,12 @@
   margin-bottom: 20px;
 }
 
+.App-header h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #9157f5;   
+}
+
 .App-logo {
   height: 50px;
   width: auto;
