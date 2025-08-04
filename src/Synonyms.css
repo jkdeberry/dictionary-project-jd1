@@ -1,8 +1,8 @@
 .Synonyms {
   margin-top: 20px;
   padding: 15px;
-  background-color: #f4f9fa;
-  border: 1px solid #95e3f3; 
+  background-color: white;
+  border: 1px solid  #9157f5; 
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -22,8 +22,8 @@
 }
 
 .SynonymList li {
-  background-color: #e0f7fa;
-  color: #00796b;
+  background-color: white;
+  color:  #9157f5;
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 14px;
